@@ -16,6 +16,9 @@ body .seccion-productos .card .btn {
   background-color: rgba(255, 0, 0, 0.344);
   border: red;
 }
+body .seccion-productos .card .btn:hover {
+  background-color: rgba(255, 0, 0, 0.603);
+}
 body .table-contain {
   margin-left: 3rem;
   margin-right: 3rem;

@@ -84,3 +84,6 @@ function guardar_carrito(carrito) {
     localStorage.setItem("carrito", carrito_JSON);
 }
 
+for (let producto of obtener_carrito()) {
+    mostrar_carrito(producto);
+}

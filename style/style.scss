@@ -1,0 +1,25 @@
+body{
+    background-image: url(/img/fondo-listaProductos.jpg);
+
+    nav{
+        background-color:rgba(255, 0, 0, 0.344);
+    }
+    .seccion-productos{
+        display: flex;
+        padding: 1rem;
+        justify-content: space-around;
+
+        .card{
+            text-align: center;
+            .btn{
+                background-color: rgba(255, 0, 0, 0.344);
+                border: red;
+            }
+            
+        }
+    }
+    .table-contain{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}

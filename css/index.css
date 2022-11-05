@@ -12,6 +12,12 @@ body .seccion-productos {
 body .seccion-productos .card {
   text-align: center;
 }
+body .seccion-productos .card .card-title {
+  color: rgba(255, 0, 0, 0.603);
+}
+body .seccion-productos .card .precio {
+  font-weight: bold;
+}
 body .seccion-productos .card .btn {
   background-color: rgba(255, 0, 0, 0.344);
   border: red;

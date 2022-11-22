@@ -34,4 +34,16 @@ body .seccion-carrito h2 {
 body .table-contain {
   margin-left: 3rem;
   margin-right: 3rem;
+}
+body .seccion-botones {
+  text-align: center;
+}
+body .seccion-botones .btn {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.344);
+  border: red;
+  margin-bottom: 2rem;
+}
+body .seccion-botones .btn:hover {
+  background-color: rgba(255, 0, 0, 0.603);
 }/*# sourceMappingURL=style.css.map */

@@ -39,4 +39,16 @@ body{
         margin-left: 3rem;
         margin-right: 3rem;
     }
+    .seccion-botones{
+        text-align: center;
+        .btn{
+            color: white;
+            background-color: rgba(255, 0, 0, 0.344);
+            border: red;
+            margin-bottom: 2rem;
+            &:hover{
+                    background-color:rgba(255, 0, 0, 0.603);
+                }
+        }
+    }
 }

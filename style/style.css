@@ -46,6 +46,17 @@ body .seccion-productos .card .btn {
 body .seccion-productos .card .btn:hover {
   background-color: rgba(255, 0, 0, 0.603);
 }
+body .carritoVacio {
+  text-align: center;
+}
+body .carritoVacio i {
+  font-size: 5rem;
+}
+body .carritoVacio h6 {
+  color: rgba(255, 0, 0, 0.603);
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
 body .seccion-carrito h2 {
   text-align: center;
   color: rgba(255, 0, 0, 0.603);
@@ -67,4 +78,7 @@ body .seccion-botones .btn {
 }
 body .seccion-botones .btn:hover {
   background-color: rgba(255, 0, 0, 0.603);
+}
+body #tabla, body #botonesTabla {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

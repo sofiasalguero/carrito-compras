@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="sweetalert2.min.css">
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <title>Carrito De Compras</title>
 </head>
 <body>
@@ -66,7 +67,12 @@
       <h2>Carrito De Compras</h2>
     </div>
 
-    <div class="table-contain">
+    <div class="carritoVacio">
+      <i class="bi bi-cart4"></i>
+      <h6>Carrito Vacio</h6>
+    </div>
+
+    <div class="table-contain" id="tabla">
       <table class="table table-dark">
         <thead>
           <tr>
@@ -83,7 +89,7 @@
       </table>
     </div>
 
-    <div class="seccion-botones">
+    <div class="seccion-botones" id="botonesTabla">
       <button class="btn" id="vaciarCarrito">Vaciar Carrito</button>
       <button class="btn" id="finalizarCompra">Finalizar Compra</button>
     </div>

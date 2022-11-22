@@ -1,4 +1,8 @@
 let botones_comprar = document.querySelectorAll(".btn-comprar");
+let tablaProductos = document.getElementById("tabla");
+let botonesTabla = document.getElementById("botonesTabla");
+let carritoVacio = document.getElementsByClassName("carritoVacio")[0];
+
 
 for (let boton of botones_comprar){
     boton.addEventListener("click", agregar_a_carrito)
@@ -68,6 +72,17 @@ function mostrar_carrito (carrito) {
     for( let boton of btn_borrar){
 
         boton.addEventListener("click", borrar_producto);
+    }
+    
+    
+    if (carrito.length > 0) {
+        carritoVacio.style.display = 'none';
+        tablaProductos.style.display = 'block';
+        botonesTabla.style.display = 'block';
+    } else {
+        carritoVacio.style.display = 'block';
+        tablaProductos.style.display = 'none';
+        botonesTabla.style.display = 'none';
     }
 }
 

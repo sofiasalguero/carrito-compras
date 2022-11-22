@@ -48,6 +48,17 @@ body{
             
         }
     }
+    .carritoVacio{
+        text-align: center;
+        i{
+            font-size: 5rem;
+        }
+        h6{
+            color:rgba(255, 0, 0, 0.603);
+            font-size: 1.2rem;
+            margin-bottom: 5rem;
+        }
+    }
     .seccion-carrito{
         h2{
             text-align: center;
@@ -72,4 +83,9 @@ body{
                 }
         }
     }
+
+    #tabla, #botonesTabla{
+        display: none;
+    }
+    
 }

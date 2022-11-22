@@ -92,3 +92,27 @@ function guardar_carrito(carrito) {
 
 
 mostrar_carrito(obtener_carrito());
+
+//Clima y geolocalizacion//
+
+let api_key = "b0d179d6194ebdce644424c11e086065";
+
+navigator.geolocation.getCurrentPosition(showPosition)
+
+
+function showPosition(position){
+
+
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&lang=es&units=metric&appid="+api_key)
+    .then(response=>response.json())
+    .then(data=>{
+            let wheater = document.getElementsByClassName("wheater")[0];
+            wheater.innerHTML = `
+                                <p>${data.name}, ${data.sys.country}</p>
+                                <p>${data.main.temp}°</p>`;
+    })
+}
+

@@ -39,6 +39,13 @@ function agregar_a_carrito(event) {
     guardar_carrito(carrito);
     
     mostrar_carrito(carrito);
+
+    Swal.fire({
+        icon: 'success',
+        title: producto.nombre + ' agregado(a) al carrito',
+        showConfirmButton: false,
+        timer: 1500
+      });
 }
 
 function mostrar_carrito (carrito) {
@@ -93,6 +100,15 @@ function guardar_carrito(carrito) {
 
 mostrar_carrito(obtener_carrito());
 
+//Funcion vaciar carrito//
+function vaciarCarrito() {
+    localStorage.clear("carrito")
+    mostrar_carrito([]);
+}
+
+let vaciarCarritoBTN = document.getElementById("vaciarCarrito");
+vaciarCarritoBTN.addEventListener("click", vaciarCarrito);
+
 //Clima y geolocalizacion//
 
 let api_key = "b0d179d6194ebdce644424c11e086065";
@@ -116,3 +132,29 @@ function showPosition(position){
     })
 }
 
+//Boton Finalizar Compra//
+function finalizarCompra() {
+    let productos= obtener_carrito();
+    let total = productos.reduce((accu, producto) => accu + (producto.precio*producto.cantidad), 0);
+    let cantidadProductos = productos.reduce((accu, producto) => accu + producto.cantidad, 0);
+    let confimacion = Swal.fire({
+        title: '<strong>Felicitaciones por su compra!</strong>',
+        icon: 'success',
+        html:
+          `Usted debe abonar <b>$${total}</b> `+
+          `<br>`+
+          `Cantidad de prendas: <b>${cantidadProductos}</b> `,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText:
+          'Confirmar',
+      });
+      confimacion.then((result) => {
+        if (result.isConfirmed) {
+          vaciarCarrito();
+        } 
+      })
+}
+let finalizarCompraBTN = document.getElementById("finalizarCompra");
+finalizarCompraBTN.addEventListener("click", finalizarCompra);
